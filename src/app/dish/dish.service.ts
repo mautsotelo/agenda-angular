@@ -25,4 +25,13 @@ export class DishService {
     const data = await fetch(this.url, options);
     return await data.json();
   }
+
+  async deleteDish(id: string): Promise<Dish> {
+    const options = {
+      method: "DELETE"
+    }
+
+    const data = await fetch(`${this.url}/${id}`, options);
+    return await data.json();
+  } 
 }

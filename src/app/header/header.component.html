@@ -19,7 +19,7 @@
     </div>
   </header>
   <section class="section-container">
-    <app-dish *ngFor="let dish of dishesList" [dish]="dish" ></app-dish>
+    <app-dish *ngFor="let dish of dishesList" [dish]="dish" (closeEvent)="closeNewDish()" (refreshEvent)="refreshList()"></app-dish>
   </section>
   <app-new-dish *ngIf="openNewDish" (closeEvent)="closeNewDish()" (refreshEvent)="refreshList()"></app-new-dish>
 </main>
