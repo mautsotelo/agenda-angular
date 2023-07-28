@@ -1,0 +1,9 @@
+.input-custom {
+    width: 100%;
+}
+
+.inline {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}

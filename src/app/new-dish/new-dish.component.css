@@ -35,16 +35,6 @@
     z-index: 9999;
 }
 
-.input-custom {
-    width: 100%;
-}
-
-.inline {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 2rem;
-}
-
 .close-btn {
     right: -1.5rem;
     top: -1.5rem;

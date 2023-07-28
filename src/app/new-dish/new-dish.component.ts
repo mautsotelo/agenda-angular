@@ -4,15 +4,14 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { Dish } from '../dish/dish';
 import { DishService } from '../dish/dish.service';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { DishFormComponent } from '../dish-form/dish-form.component';
 
 @Component({
   selector: 'app-new-dish',
   standalone: true,
-  imports: [CommonModule, MatCardModule, MatInputModule, MatFormFieldModule, MatIconModule, MatButtonModule, ReactiveFormsModule],
+  imports: [CommonModule, MatCardModule, MatInputModule, MatIconModule, MatButtonModule, ReactiveFormsModule, DishFormComponent],
   styleUrls: ['./new-dish.component.css'],
   templateUrl: './new-dish.component.html',
 })
