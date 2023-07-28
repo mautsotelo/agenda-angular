@@ -1,0 +1,39 @@
+{
+  "dishes": [
+    {
+      "id": "0",
+      "name": "Pizza",
+      "photo": "https://img.freepik.com/fotos-gratis/o-pepperoni-em-fatias-finas-e-uma-cobertura-de-pizza-popular-em-pizzarias-de-estilo-americano-isolado-no-fundo-branco-natureza-morta_639032-229.jpg?w=2000",
+      "price": 70,
+      "description": "Disco de massa fermentada de farinha de trigo, coberto com molho de tomate e ingredientes variados."
+    },
+    {
+      "id": "1",
+      "name": "Ravioli",
+      "photo": "https://www.sabornamesa.com.br/media/k2/items/cache/216e854e1c1543768b9e64c2a046ffcb_XL.jpg",
+      "price": 90,
+      "description": "Pequenos pastéis de massa recheadas com carne, peixe, vegetais ou queijo e cozidos em molho."
+    },
+    {
+      "id": "1690579442997",
+      "name": "Lasagna",
+      "photo": "https://www.southernliving.com/thmb/iI2Pd7BIh0MFuQ79WIEtgli9Ji4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Extra_Easy_Lasagna_006_4x3-41b0a478514c43e9baed0659bd362625.jpg",
+      "description": "feito com fitas largas em camadas e entremeadas com recheio (queijo, presunto, carne moída e molho.",
+      "price": "50"
+    },
+    {
+      "id": "1690580958693",
+      "name": "Polpettone",
+      "photo": "https://staticcookist.akamaized.net/wp-content/uploads/sites/21/2021/10/Polpettone-di-carne-1200x675.jpg",
+      "description": "Um bolo feito com carne moída bovina e suína assado em brasa.",
+      "price": "65"
+    },
+    {
+      "id": "1690581340486",
+      "name": "Struffoli ",
+      "photo": "https://assets.unileversolutions.com/recipes-v2/215900.jpg",
+      "description": "Um doce típico italiano feito com uma massa frita e calda de mel.",
+      "price": "100"
+    }
+  ]
+}

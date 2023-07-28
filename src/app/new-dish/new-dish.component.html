@@ -1,0 +1,41 @@
+<div class="container">
+  <mat-card class="card-container">
+    <mat-card-header class="title-container">
+      <mat-card-title width="100%">
+        <span class="title-text">Novo prato</span>
+      </mat-card-title>
+      <button mat-icon-button class="close-btn" (click)="close()">
+        <mat-icon aria-hidden="false" aria-label="close icon" fontIcon="close"></mat-icon>
+      </button>
+    </mat-card-header>
+    <mat-card-content>
+      <form [formGroup]="dishForm" (submit)="addNewDish()">
+        <mat-form-field appearance="fill" class="input-custom">
+          <mat-label>URL da imagem</mat-label>
+          <input matInput placeholder="Cole o link aqui" formControlName="photo">
+        </mat-form-field>
+        <div class="inline">
+          <mat-form-field appearance="fill">
+            <mat-label>Nome do prato</mat-label>
+            <input matInput placeholder="Ex: Moda italiana" formControlName="name">
+          </mat-form-field>
+          <mat-form-field floatLabel="always">
+            <mat-label>Preço</mat-label>
+            <span matTextPrefix>R$&nbsp;</span>
+            <input matInput class="example-right-align" placeholder="00,00" formControlName="price">
+          </mat-form-field>
+        </div>
+        <mat-form-field appearance="fill" class="input-custom">
+          <mat-label>Descrição do prato</mat-label>
+          <input matInput placeholder="" formControlName="description">
+        </mat-form-field>
+      </form>
+    </mat-card-content>
+    <mat-card-actions align="end">
+      <button mat-raised-button color="accent" class="save-btn" (click)="addNewDish()">
+        Adicionar prato
+        <mat-icon aria-hidden="false" aria-label="check icon" fontIcon="check_box"></mat-icon>
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

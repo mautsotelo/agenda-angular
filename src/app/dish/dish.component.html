@@ -1,0 +1,23 @@
+<mat-card class="card-container">
+  <div class="content">
+    <img
+      [src]="dish.photo"
+      alt="">
+    <div class="description-container">
+      <strong class="title">{{ dish.name }}</strong>
+      <span class="description">{{ dish.description }}</span>
+      <span class="price">R$ {{ dish.price }}</span>
+    </div>
+    <div class="actions">
+      <div class="">
+        <button mat-icon-button>
+          <mat-icon aria-hidden="false" aria-label="edit icon" fontIcon="edit"></mat-icon>
+        </button>
+        <button mat-icon-button>
+          <mat-icon aria-hidden="false" aria-label="delete icon" fontIcon="delete"></mat-icon>
+        </button>
+      </div>
+      <mat-slide-toggle>Disponível</mat-slide-toggle>
+    </div>
+  </div>
+</mat-card>

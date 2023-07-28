@@ -1,7 +1,18 @@
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
-import { AppModule } from './app/app.module';
+import { AppComponent } from './app/app.component'; 
+import { bootstrapApplication, provideProtractorTestingSupport } from '@angular/platform-browser';
+import { provideRouter } from '@angular/router';
+
+import routeConfig from './app/routes';
+import { provideAnimations } from '@angular/platform-browser/animations';
 
 
-platformBrowserDynamic().bootstrapModule(AppModule)
-  .catch(err => console.error(err));
+bootstrapApplication(AppComponent,
+  {
+    providers: [
+      provideProtractorTestingSupport(),
+      provideRouter(routeConfig),
+      provideAnimations()
+    ]
+  }
+).catch(err => console.error(err));
