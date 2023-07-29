@@ -10,14 +10,14 @@
     </div>
     <div class="actions">
       <div class="">
-        <button mat-icon-button>
+        <button mat-icon-button (click)="editItem(dish.id)">
           <mat-icon aria-hidden="false" aria-label="edit icon" fontIcon="edit"></mat-icon>
         </button>
         <button mat-icon-button (click)="deleteItem(dish.id)">
           <mat-icon aria-hidden="false" aria-label="delete icon" fontIcon="delete"></mat-icon>
         </button>
       </div>
-      <mat-slide-toggle>Disponível</mat-slide-toggle>
+      <mat-slide-toggle checked>Disponível</mat-slide-toggle>
     </div>
   </div>
 </mat-card>

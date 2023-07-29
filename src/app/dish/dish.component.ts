@@ -16,15 +16,19 @@ import { DishService } from './dish.service';
 })
 export class DishComponent {
   @Input() dish!: Dish;
-  @Output() closeEvent = new EventEmitter<boolean>();
   @Output() refreshEvent = new EventEmitter<boolean>();
+  @Output() editEvent = new EventEmitter<string>();
   
   dishService: DishService = inject(DishService);
 
   deleteItem(id: string) {
     this.dishService.deleteDish(id).then(resp => {
-      this.closeEvent.emit(false);
       this.refreshEvent.emit(true);
     })
+  }
+
+  editItem(id: string) {
+    console.log("dish", id)
+    this.editEvent.emit(id);
   }
 }

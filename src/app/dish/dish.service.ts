@@ -13,6 +13,11 @@ export class DishService {
     const data = await fetch(this.url);
     return await data.json() ?? [];
   }
+  
+  async getDishByID(id: string): Promise<Dish> {
+    const data = await fetch(`${this.url}/${id}`);
+    return await data.json();
+  }
 
   async createDish(dish: Dish): Promise<Dish> {
     const options = {
@@ -23,6 +28,18 @@ export class DishService {
       body: JSON.stringify(dish)
     }
     const data = await fetch(this.url, options);
+    return await data.json();
+  }
+
+  async editDish(dish: Dish): Promise<Dish> {
+    const options = {
+      method: "PUT",
+      headers: {
+       "Content-Type": "application/json"
+      },
+      body: JSON.stringify(dish)
+    }
+    const data = await fetch(`${this.url}/${dish.id}`, options);
     return await data.json();
   }
 

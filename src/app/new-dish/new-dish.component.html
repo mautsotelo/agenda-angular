@@ -9,7 +9,27 @@
       </button>
     </mat-card-header>
     <mat-card-content>
-      <app-dish-form [formGroup]="dishForm" (submit)="addNewDish()"></app-dish-form>
+      <form  [formGroup]="dishForm">
+        <mat-form-field appearance="fill" class="input-custom">
+          <mat-label>URL da imagem</mat-label>
+          <input matInput placeholder="Cole o link aqui" formControlName="photo">
+        </mat-form-field>
+        <div class="inline">
+          <mat-form-field appearance="fill">
+            <mat-label>Nome do prato</mat-label>
+            <input matInput placeholder="Ex: Moda italiana" formControlName="name">
+          </mat-form-field>
+          <mat-form-field floatLabel="always">
+            <mat-label>Preço</mat-label>
+            <span matTextPrefix>R$&nbsp;</span>
+            <input matInput class="example-right-align" placeholder="00,00" formControlName="price">
+          </mat-form-field>
+        </div>
+        <mat-form-field appearance="fill" class="input-custom">
+          <mat-label>Descrição do prato</mat-label>
+          <input matInput placeholder="" formControlName="description">
+        </mat-form-field>
+      </form>
     </mat-card-content>
     <mat-card-actions align="end">
       <button mat-raised-button color="accent" class="save-btn" (click)="addNewDish()">
